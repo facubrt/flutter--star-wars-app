@@ -1,4 +1,6 @@
 # Starwapp
+![](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ### Aplicación desarrollada en Flutter - Desafío Star Wars
 El desafío consiste en desarrollar una aplicación que permita visualizar una lista de personajes, ver el detalle de cada uno de los personajes y reportar el avistamiento de los mismos. Además, debe permitirse la posibilidad de activar / desactivar la conexión de la aplicación de manera independiente a los datos móviles y/o wifi.
 
@@ -74,7 +76,14 @@ No hay requerimientos específicos con respecto al estilo de la aplicación, sin
 ![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 ![](https://img.shields.io/badge/Google_Play-414141?style=for-the-badge&logo=google-play&logoColor=white)
 
+## Propuesta
+<p float="left">
+  <img src="https://i.ibb.co/t3T6c9m/image.png" width="200px">
+  <img src="https://i.ibb.co/7z4WLyp/image.png" width="200px">
+  <img src="https://i.ibb.co/QJkyk0F/image.png" width="200px">
+</p>
 
 ## Roadmap
 
 `13/10/2022` - Creación de repositorio<br>
+`13/10/2022` - Se realiza el diseño base visual teniendo en cuenta los requerimientos establecidos. Se utiliza *Figma* como herramienta para bosquejar las pantallas principales de la aplicación<br>
