@@ -88,3 +88,4 @@ No hay requerimientos específicos con respecto al estilo de la aplicación, sin
 `13/10/2022` - Creación de repositorio<br>
 `13/10/2022` - Se realiza el diseño base visual teniendo en cuenta los requerimientos establecidos. Se utiliza *Figma* como herramienta para bosquejar las pantallas principales de la aplicación<br>
 `14/10/2022` - Creación de proyecto utilizando comando de línea Flutter create --org com.starwapp starwapp. Creación de estructura base del proyecto.
+`15/10/2022` - Diseño y desarrollo base de páginas principales. Creación de widgets visuales, modelos y navegación por rutas.
