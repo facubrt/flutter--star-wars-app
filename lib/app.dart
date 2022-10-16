@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:starwapp/views/pages/home/home_page.dart';
+import 'package:starwapp/utils/routes.dart';
 
 class Starwapp extends StatelessWidget {
   const Starwapp({Key? key}) : super(key: key);
@@ -7,11 +7,16 @@ class Starwapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Star Wars Challenge',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Poppins',
+        primarySwatch: Colors.teal,
+        splashColor: Colors.teal.withOpacity(0.2),
+        highlightColor: Colors.teal.withOpacity(0.1)
       ),
-      home: const HomePage(),
+      initialRoute: basePage,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
