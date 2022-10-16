@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starwapp/services/user_preferences.dart';
 
 class ToggleOptionWidget extends StatefulWidget {
   final String title;
@@ -11,10 +12,11 @@ class ToggleOptionWidget extends StatefulWidget {
 
 class _ToggleOptionWidgetState extends State<ToggleOptionWidget> {
   late bool state;
+  final UserPreferences prefs = UserPreferences();
 
   @override
   void initState() {
-    state = false;
+    state = prefs.connection;
     super.initState();
   }
 
@@ -25,6 +27,7 @@ class _ToggleOptionWidgetState extends State<ToggleOptionWidget> {
       onChanged: (value) {
         setState(() {
           state = !state;
+          prefs.connection = state;
         });
       },
       contentPadding: const EdgeInsets.symmetric(horizontal: 40),

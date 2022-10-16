@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:starwapp/constants/constants.dart';
 import 'package:starwapp/models/character.dart';
+import 'package:starwapp/services/user_preferences.dart';
 import 'package:starwapp/views/pages/detail/widgets/description_list_widget.dart';
 import 'package:starwapp/views/pages/detail/widgets/resume_widget.dart';
 import 'package:starwapp/views/pages/detail/widgets/starships_list_widget.dart';
 import 'package:starwapp/views/pages/detail/widgets/vehicles_list_widget.dart';
+import 'package:starwapp/views/widgets/text_button_app.dart';
 import 'package:starwapp/views/widgets/title_widget.dart';
 
 class DetailPage extends StatefulWidget {
@@ -17,6 +19,7 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
   final tabs = [TAB_DESCRIPTION, TAB_VEHICLES, TAB_STARSHIPS];
+  final UserPreferences prefs = UserPreferences();
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +28,38 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
       appBar: AppBar(
         title: const Text(DETAIL_PAGE),
         elevation: 0,
+        backgroundColor: Theme.of(context).primaryColorDark,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TitleWidget(title: widget.character.name!),
+          prefs.connection
+              ? TextButtonApp(title: REPORT_BUTTON_TITLE, onPressed: () {})
+              : Container(
+                  margin: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColorDark,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(Icons.info, color: Theme.of(context).primaryColor),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.06,
+                      ),
+                      Flexible(
+                        child: Text(
+                          MSG_NOT_CONNECTION,
+                          style: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
           ResumeWidget(gender: widget.character.gender!, birthYear: widget.character.birthYear!, homeworld: widget.character.homeworld!),
           TabBar(
             padding: const EdgeInsets.all(40.0),
@@ -56,7 +86,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
           ),
           Expanded(
             child: TabBarView(
-              physics: const BouncingScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               controller: tabController,
               children: [
                 DescriptionListWidget(
@@ -64,21 +94,16 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                   mass: widget.character.mass!,
                   eyeColor: widget.character.eyeColor!,
                   hairColor: widget.character.hairColor!,
-                  ),
-                VehiclesListWidget(vehicles: widget.character.vehicles!,),
+                ),
+                VehiclesListWidget(
+                  vehicles: widget.character.vehicles!,
+                ),
                 StarshipsListWidget(starships: widget.character.starships!),
               ],
             ),
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        elevation: 6,
-        icon: const Icon(Icons.report),
-        label: const Text(REPORT_BUTTON_TITLE),
-        onPressed: () {},
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 }

@@ -29,8 +29,8 @@ class _BasePageState extends State<BasePage> {
       body: pages[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
+        backgroundColor: Theme.of(context).primaryColorDark,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.teal,
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white70,
         iconSize: 26,

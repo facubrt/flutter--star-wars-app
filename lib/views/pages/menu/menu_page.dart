@@ -12,6 +12,7 @@ class MenuPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(MENU_PAGE),
         elevation: 0,
+        backgroundColor: Theme.of(context).primaryColorDark,
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

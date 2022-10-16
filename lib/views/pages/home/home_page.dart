@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text(HOME_PAGE),
         elevation: 0,
+        backgroundColor: Theme.of(context).primaryColorDark,
       ),
       body: Column(children: const [
         TitleWidget(

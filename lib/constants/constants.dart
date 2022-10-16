@@ -14,3 +14,4 @@ const String REPORT_BUTTON_TITLE = 'Reportar avistamiento';
 const String TAB_DESCRIPTION = 'Descripción';
 const String TAB_VEHICLES = 'Vehículos';
 const String TAB_STARSHIPS = 'Naves';
+const String MSG_NOT_CONNECTION = 'Debes activar la conexión para reportar el avistamiento de este personaje.';
