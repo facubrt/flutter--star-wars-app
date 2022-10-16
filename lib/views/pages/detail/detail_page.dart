@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starwapp/constants/constants.dart';
 import 'package:starwapp/models/character.dart';
 import 'package:starwapp/views/pages/detail/widgets/description_list_widget.dart';
 import 'package:starwapp/views/pages/detail/widgets/resume_widget.dart';
@@ -15,14 +16,14 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
-  final tabs = ['Descripción', 'Vehículos', 'Naves'];
+  final tabs = [TAB_DESCRIPTION, TAB_VEHICLES, TAB_STARSHIPS];
 
   @override
   Widget build(BuildContext context) {
     TabController tabController = TabController(initialIndex: 0, vsync: this, length: tabs.length);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Detalle'),
+        title: const Text(DETAIL_PAGE),
         elevation: 0,
       ),
       body: Column(
@@ -74,7 +75,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
       floatingActionButton: FloatingActionButton.extended(
         elevation: 6,
         icon: const Icon(Icons.report),
-        label: const Text('Reportar avistamiento'),
+        label: const Text(REPORT_BUTTON_TITLE),
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

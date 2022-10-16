@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starwapp/constants/constants.dart';
 import 'package:starwapp/utils/routes.dart';
 
 class Starwapp extends StatelessWidget {
@@ -8,7 +9,7 @@ class Starwapp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Star Wars Challenge',
+      title: APP_NAME,
       theme: ThemeData(
         fontFamily: 'Poppins',
         primarySwatch: Colors.teal,

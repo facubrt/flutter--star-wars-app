@@ -12,7 +12,7 @@ class StarshipsListWidget extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       itemCount: starships.length,
       itemBuilder: (context, index) {
-        return ItemWidget(title: starships[index].name!, subtitle: starships[index].model!);
+        return ItemWidget(title: starships[index].model!, subtitle: starships[index].name!);
       },
       separatorBuilder: (context, index) {
         return Divider(

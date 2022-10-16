@@ -12,7 +12,7 @@ class VehiclesListWidget extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
         itemCount: vehicles.length,
         itemBuilder: (context, index) {
-          return ItemWidget(title: vehicles[index].name!, subtitle: vehicles[index].model!);
+          return ItemWidget(title: vehicles[index].model!, subtitle: vehicles[index].name!);
         },
         separatorBuilder: (context, index) {
           return Divider(

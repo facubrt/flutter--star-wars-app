@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starwapp/constants/constants.dart';
 import 'package:starwapp/views/pages/home/widgets/people_list_widget.dart';
 import 'package:starwapp/views/widgets/subtitle_widget.dart';
 import 'package:starwapp/views/widgets/title_widget.dart';
@@ -10,15 +11,15 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Inicio'),
+        title: const Text(HOME_PAGE),
         elevation: 0,
       ),
       body: Column(children: const [
         TitleWidget(
-          title: '¡Que la fuerza te acompañe!',
+          title: HOME_TITLE,
         ),
         SubtitleWidget(
-          subtitle: 'Reporta los personajes de Star Wars avistados en la tierra sin que te descubran',
+          subtitle: HOME_SUBTITLE,
         ),
         Expanded(
           child: PeopleListWidget(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:starwapp/constants/constants.dart';
 import 'package:starwapp/views/pages/home/home_page.dart';
 import 'package:starwapp/views/pages/menu/menu_page.dart';
 
@@ -40,11 +41,11 @@ class _BasePageState extends State<BasePage> {
         }),
         items: const [
           BottomNavigationBarItem(
-            label: 'Inicio',
+            label: HOME_PAGE,
             icon: Icon(Icons.home),
           ),
           BottomNavigationBarItem(
-            label: 'Menu',
+            label: MENU_PAGE,
             icon: Icon(Icons.settings),
           )
         ],
