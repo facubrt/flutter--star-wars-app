@@ -5,7 +5,8 @@ import 'package:starwapp/views/pages/detail/widgets/property_widget.dart';
 class ItemWidget extends StatelessWidget {
   final String title;
   final String subtitle;
-  const ItemWidget({Key? key, required this.title, required this.subtitle}) : super(key: key);
+  const ItemWidget({Key? key, required this.title, required this.subtitle})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

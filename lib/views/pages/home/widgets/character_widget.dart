@@ -11,14 +11,14 @@ class CharacterWidget extends StatelessWidget {
     return ListTile(
       contentPadding: const EdgeInsets.symmetric(horizontal: 40),
       title: Text(
-        character.name!,
+        character.name,
         style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       ),
       subtitle: Text(
-        character.gender!.toUpperCase(),
+        character.gender.toUpperCase(),
         style: const TextStyle(
           fontSize: 12,
         ),

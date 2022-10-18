@@ -9,10 +9,7 @@ class PropertyWidget extends StatelessWidget {
     return Text(
       property,
       style: const TextStyle(
-        color: Colors.black,
-        fontSize: 18,
-        fontWeight: FontWeight.bold
-        ),
+          color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
     );
   }
 }

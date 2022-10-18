@@ -3,7 +3,13 @@ import 'package:starwapp/views/pages/detail/widgets/item_widget.dart';
 
 class DescriptionListWidget extends StatelessWidget {
   final String height, mass, eyeColor, hairColor;
-  const DescriptionListWidget({Key? key, required this.height, required this.mass, required this.eyeColor, required this.hairColor}) : super(key: key);
+  const DescriptionListWidget(
+      {Key? key,
+      required this.height,
+      required this.mass,
+      required this.eyeColor,
+      required this.hairColor})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

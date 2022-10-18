@@ -1,28 +1,25 @@
-import 'package:starwapp/models/starship.dart';
-import 'package:starwapp/models/vehicle.dart';
+// ignore_for_file: non_constant_identifier_names
 
-class Character {
-  String? name;
-  String? gender;
-  String? homeworld;
-  String? birthYear;
-  String? hairColor;
-  String? eyeColor;
-  String? height;
-  String? mass;
-  List<Vehicle>? vehicles;
-  List<Starship>? starships;
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-  Character({
-    this.name,
-    this.gender,
-    this.birthYear,
-    this.homeworld,
-    this.hairColor,
-    this.eyeColor,
-    this.height,
-    this.mass,
-    this.vehicles,
-    this.starships,
-  });
+part 'character.freezed.dart';
+part 'character.g.dart';
+
+@freezed
+class Character with _$Character {
+  const factory Character({
+    required String name,
+    required String height,
+    required String mass,
+    required String hair_color,
+    required String eye_color,
+    required String birth_year,
+    required String gender,
+    required String homeworld,
+    required List<String>? vehicles,
+    required List<String>? starships,
+  }) = _Character;
+
+  factory Character.fromJson(Map<String, Object?> json) =>
+      _$CharacterFromJson(json);
 }

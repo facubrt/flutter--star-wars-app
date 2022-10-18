@@ -23,7 +23,8 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    TabController tabController = TabController(initialIndex: 0, vsync: this, length: tabs.length);
+    TabController tabController =
+        TabController(initialIndex: 0, vsync: this, length: tabs.length);
     return Scaffold(
       appBar: AppBar(
         title: const Text(DETAIL_PAGE),
@@ -33,11 +34,11 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TitleWidget(title: widget.character.name!),
+          TitleWidget(title: widget.character.name),
           prefs.connection
-              ? TextButtonApp(title: REPORT_BUTTON_TITLE, onPressed: () {})
-              : Container(
-                  margin: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+              ? Container(
+                  margin:
+                      const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: Theme.of(context).primaryColorDark,
@@ -59,8 +60,12 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                       ),
                     ],
                   ),
-                ),
-          ResumeWidget(gender: widget.character.gender!, birthYear: widget.character.birthYear!, homeworld: widget.character.homeworld!),
+                )
+              : TextButtonApp(title: REPORT_BUTTON_TITLE, onPressed: () {}),
+          ResumeWidget(
+              gender: widget.character.gender,
+              birthYear: widget.character.birth_year,
+              homeworld: widget.character.homeworld),
           TabBar(
             padding: const EdgeInsets.all(40.0),
             indicatorColor: Colors.black,
@@ -75,7 +80,7 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
                       child: Text(
                         collection.toUpperCase(),
                         style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 10,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -90,15 +95,19 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
               controller: tabController,
               children: [
                 DescriptionListWidget(
-                  height: widget.character.height!,
-                  mass: widget.character.mass!,
-                  eyeColor: widget.character.eyeColor!,
-                  hairColor: widget.character.hairColor!,
+                  height: widget.character.height,
+                  mass: widget.character.mass,
+                  eyeColor: widget.character.eye_color,
+                  hairColor: widget.character.hair_color,
                 ),
                 VehiclesListWidget(
-                  vehicles: widget.character.vehicles!,
+                  vehicles:
+                      widget.character.vehicles!, //widget.character.vehicles!,
                 ),
-                StarshipsListWidget(starships: widget.character.starships!),
+                StarshipsListWidget(
+                  starships:
+                      widget.character.starships!, //widget.character.starships!
+                ),
               ],
             ),
           ),

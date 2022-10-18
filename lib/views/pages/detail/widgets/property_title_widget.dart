@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class PropertyTitleWidget extends StatelessWidget {
   final String property;
-  const PropertyTitleWidget({Key? key, required this.property}) : super(key: key);
+  const PropertyTitleWidget({Key? key, required this.property})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class PropertyTitleWidget extends StatelessWidget {
       property.toUpperCase(),
       style: const TextStyle(
         color: Colors.black38,
-        fontSize: 12,
+        fontSize: 10,
       ),
     );
   }
