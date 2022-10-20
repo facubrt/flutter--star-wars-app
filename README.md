@@ -76,10 +76,19 @@ No hay requerimientos específicos con respecto al estilo de la aplicación, sin
 ![](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
 
 ## Propuesta
+A continuación se presenta la primera propuesta de la aplicación realizada con la herramienta *Figma*. La misma tiene como finalidad dar un primer pantallazo a la aplicación final, y permite orientarse al momento de pensar y realizar el código. Se busca tener una idea clara y definida de cómo se resolverán cada uno de los requerimientos de diseño.
+
 <p float="left">
   <img src="https://i.ibb.co/t3T6c9m/image.png" width="200px">
   <img src="https://i.ibb.co/7z4WLyp/image.png" width="200px">
   <img src="https://i.ibb.co/QJkyk0F/image.png" width="200px">
+</p>
+
+## Resolución
+A continuación se presenta la resolución final de la aplicación. La misma se presenta a través de gif obtenidos de una versión de código ya finalizado. Se muestran las pantallas principales de la aplicación y el funcionamiento base de la misma.
+<p float="left">
+  <img src="https://media.giphy.com/media/XQljXRqF5zNYTGytrN/giphy.gif" width="200px">
+  <img src="https://media.giphy.com/media/tZDj20R0GkXkGAvFH1/giphy.gif" width="200px">
 </p>
 
 ## Roadmap
