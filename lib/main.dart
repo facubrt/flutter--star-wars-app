@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:starwapp/src/app.dart';
-import 'package:starwapp/src/presentation/logic/provider/sw_provider.dart';
-import 'package:starwapp/src/presentation/logic/services/user_preferences.dart';
+import 'package:starwapp/src/provider/sw_provider.dart';
+import 'package:starwapp/src/data/local/user_preferences.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

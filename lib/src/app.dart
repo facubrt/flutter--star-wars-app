@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:starwapp/src/core/constants/constants.dart';
-import 'package:starwapp/src/core/theme/color_app.dart';
-import 'package:starwapp/src/core/utils/routes.dart';
+import 'package:starwapp/src/constants/constants.dart';
+import 'package:starwapp/src/theme/color_app.dart';
+import 'package:starwapp/src/utils/routes.dart';
 
 class Starwapp extends StatelessWidget {
   const Starwapp({Key? key}) : super(key: key);

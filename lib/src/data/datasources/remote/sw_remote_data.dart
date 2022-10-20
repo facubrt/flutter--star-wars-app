@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:starwapp/src/data/datasources/remote/isw_remote_data.dart';
 import 'package:starwapp/src/data/models/character.dart';
+import 'package:starwapp/src/data/models/report.dart';
 import 'package:starwapp/src/data/models/starship.dart';
 import 'package:starwapp/src/data/models/vehicle.dart';
 
@@ -64,13 +65,13 @@ class SWRemoteData implements ISWRemoteData {
   }
 
   @override
-  Future<String?> postReport({required Character character}) async {
+  Future<String?> postReport({required Report report}) async {
     final _dioClient = Dio();
     const url = 'https://jsonplaceholder.typicode.com/posts';
     final result = await _dioClient.post(url, queryParameters: {
-      'userId': character.name,
-      'dateTime': DateTime.now().toString(),
-      'character_name': character.name,
+      'userId': report.id,
+      'dateTime': report.date,
+      'character_name': report.name,
     });
     return result.statusMessage;
   }
