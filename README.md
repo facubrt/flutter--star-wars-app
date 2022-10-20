@@ -91,3 +91,6 @@ No hay requerimientos específicos con respecto al estilo de la aplicación, sin
 `15/10/2022` - Diseño y desarrollo base de páginas principales. Creación de widgets visuales, bottomNavigatorBar y navegación por rutas. Se crean los modelos Character, Vehicles y Starship. Los valores constantes se agrupan dentro de *constants* para mantener el código más limpio.<br>
 `16/10/2022` - Se actualiza el tema y se incorporan colores personalizados de la aplicación. Se incorpora la librería *Shared Preferences* y se utiliza para persistencia local de la configuración de conexión. Se elige esta librería por sobre otras debido a la sencillez de los datos que deben almacenarse.<br>
 `17/10/2022` - Se crea la lógica para la obtención de datos de SWAPI y el manejo de estados utilizando Provider como State Management. Se busca implementar un código limpio con la separación modelo - lógica - vista.<br>
+`18/10/2022` - Se corrigen problemas con la obtención de datos a partir de la API, se genera una listView de scroll infinito.<br>
+`19/10/2022` - Se realizan gran parte de las funciones del Provider para la obtención y posteo de datos<br>
+`20/10/2022` - Se realizan correcciones varias, se implementan Skeleton Loaders a partir de figuras simples y se terminan los detalles para la publicación final del código. STARWAPP queda finalizado.<br>
