@@ -18,7 +18,7 @@ class _ToggleOptionWidgetState extends State<ToggleOptionWidget> {
 
   @override
   void initState() {
-    state = prefs.connection;
+    state = !prefs.connection;
     super.initState();
   }
 

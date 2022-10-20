@@ -40,13 +40,13 @@ class _DetailPageState extends State<DetailPage> with TickerProviderStateMixin {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TitleWidget(title: widget.character.name),
-          prefs.connection
+          !prefs.connection
               ? Container(
                   margin:
                       const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColorDark,
+                    color: Colors.red,
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Row(

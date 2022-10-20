@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:starwapp/src/data/local/user_preferences.dart';
 import 'package:starwapp/src/provider/sw_provider.dart';
 import 'package:starwapp/src/views/pages/home/widgets/character_widget.dart';
 import 'package:starwapp/src/views/pages/home/widgets/skeleton_people_list_widget.dart';
@@ -13,6 +14,7 @@ class PeopleListWidget extends StatefulWidget {
 
 class _PeopleListWidgetState extends State<PeopleListWidget> {
   ScrollController scrollController = ScrollController();
+  final UserPreferences prefs = UserPreferences();
 
   @override
   void initState() {
@@ -37,15 +39,35 @@ class _PeopleListWidgetState extends State<PeopleListWidget> {
                   id: index,
                 );
               } else {
+                // FIN DE LISTA
                 if (!swProvider.hasNextPage) {
                   return Center(
                     child: Container(
-                      padding: const EdgeInsets.all(40),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 20),
                       width: double.infinity,
                       alignment: Alignment.center,
-                      color: Theme.of(context).primaryColorDark,
+                      color: Colors.green,
                       child: Text(
                         'Fin de la lista',
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ),
+                  );
+                }
+                // SIN CONEXIÓN
+                if (!prefs.connection) {
+                  return Center(
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 40, vertical: 20),
+                      width: double.infinity,
+                      alignment: Alignment.center,
+                      color: Colors.red,
+                      child: Text(
+                        'No tienes conexión',
                         style: TextStyle(
                           color: Theme.of(context).primaryColor,
                         ),

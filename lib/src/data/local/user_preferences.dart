@@ -21,7 +21,7 @@ class UserPreferences {
   }
 
   set connection(bool connection) {
-    _prefs.setBool('connection', connection);
+    _prefs.setBool('connection', !connection);
   }
 
   Future<bool> cleanPrefs() async {
